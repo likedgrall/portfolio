@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@300..700&display=swap');
+
+/*  <uniquifier>: Use a unique and descriptive class name */
+/*  <weight>: Use a value from 300 to 700 */
+
+body {
+    /* английский шрифт */
+    font-family: 'Fira Code', monospace; 
+
+    /* русский шрифт */
+    font-family: 'Inter', sans-serif;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+h1,h2,h3,h4,h5,p,a,span,button {
+    font-family: 'Fira Code', monospace; 
+}

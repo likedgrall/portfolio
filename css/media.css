@@ -1,0 +1,359 @@
+@media (max-width: 1510px) {
+    .about-me {
+        & .decorate-about-me {
+            .rectangle {
+                display: none;
+            }
+        }
+    }
+
+    .decorate-projects {
+        & .rectangle {
+            display: none;
+        }
+    }
+
+    .decorate-contacts {
+        & .dots {
+            display: none;
+        }
+    }
+}
+
+@media (max-width: 1080px) {
+    header .header__elements {
+        padding-top: 120px;
+        flex-direction: column;
+        gap: 60px;
+
+        & .header__info {
+            width: 100%;
+            max-width: 537px;
+
+            & button {
+                display: none;
+            }
+        }
+
+        & .header__photo {
+            & img {
+                width: 100%;
+
+            }
+
+            & .header__decoration {
+                width: 100px;
+                height: 100px;
+            }
+
+            & .header__decoration1 {
+                top: 20px;
+                left: 10px;
+            }
+        }
+    }
+
+    .about-me {
+        .about-me__elements {
+            flex-direction: column;
+            gap: 80px;
+        }
+    }
+
+    .contacts__elements {
+        flex-direction: column;
+        gap: 60px;
+        align-items: center;
+    }
+}
+
+@media (max-width: 1000px) {
+    .message {
+        padding-top: 200px;
+        padding-bottom: 100px;
+
+        & .decorate-message {
+            & .rectangle {
+                display: none;
+
+            }
+
+            & .dots {
+                display: none;
+            }
+        }
+
+        & .message__box {
+            align-items: center;
+
+            & p {
+                font-size: 18px;
+                font-weight: medium;
+                border: 1px solid var(--colorText3);
+                padding: 24px;
+                line-height: 140%;
+                position: relative;
+
+                &:after {
+                    content: url(../img/decorates/кавычки.svg);
+                    display: block;
+                    position: absolute;
+                    background-color: #23262b;
+                    top: 0;
+                    left: 0;
+                    transform: translate(25%, -50%);
+                }
+
+                &::before {
+                    content: url(../img/decorates/кавычки.svg);
+                    display: block;
+                    position: absolute;
+                    background-color: #23262b;
+                    bottom: 0;
+                    right: 0;
+                    transform: translate(-25%, +50%);
+                }
+            }
+
+            & span {
+                font-size: 18px;
+                border: 1px solid var(--colorText3);
+                padding: 16px;
+                border-top: 0;
+                line-height: 140%;
+            }
+        }
+    }
+
+
+
+    .skills {
+        & .skills__elements {
+            justify-content: center;
+
+            & .skills-decoration {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            & .skills__boxes {
+
+                &>div {}
+
+                & .skills-item {
+
+                    & h3 {}
+
+                    & p {}
+                }
+            }
+        }
+    }
+
+
+}
+
+@media (max-width: 800px) {
+    .projects {
+        & .name-section {
+            flex-direction: column;
+
+            & .name {
+                flex-direction: row;
+
+                & h2 {
+                    text-align: center;
+
+                }
+
+                & hr {
+                    display: none;
+                }
+            }
+        }
+
+        & & .projects__elements {
+            & .project-item {
+                margin: auto;
+            }
+        }
+    }
+
+    .my-fun-facts {
+        & .name-section {
+            & h2 {
+                margin: auto;
+                padding-bottom: 40px;
+            }
+
+            & hr {
+                display: none;
+            }
+        }
+
+        & .my-fun-facts__elements {
+            & .my-fun-facts__info {
+                flex-direction: column;
+
+                & .info {
+                    flex-direction: column;
+                    width: 100%;
+                }
+            }
+
+            & .my-fun-facts__decorates {
+                display: none;
+            }
+        }
+    }
+
+    .skills {
+        padding-bottom: 60px;
+
+        & .name-section {
+            & h2 {
+                margin: auto;
+                padding-bottom: 40px;
+            }
+
+            & hr {
+                display: none;
+            }
+        }
+
+        & .skills__boxes {
+            flex-direction: column;
+
+            &>div {
+                width: 100% !important;
+            }
+
+        }
+
+        & .skills-decoration {
+            display: none !important;
+        }
+    }
+
+    .about-me {
+        & .name-section {
+            & h2 {
+                margin: auto;
+                margin-bottom: 60px;
+            }
+
+            & hr {
+                display: none;
+            }
+        }
+    }
+
+    .contacts {
+        & .name-section {
+            & h2 {
+                margin: auto;
+                margin-bottom: 60px;
+            }
+
+            & hr {
+                display: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        width: 24px;
+        height: 24px;
+        position: relative;
+
+        & span {
+            position: absolute;
+            background-color: white;
+            height: 2px;
+            width: 24px;
+            right: 0;
+            transition: 0.4s;
+        }
+
+        & span:nth-child(1) {
+            top: 5px;
+        }
+
+        & span:nth-child(2) {
+            top: 12px;
+            width: 15px;
+        }
+    }
+
+    .hamburger._active {
+        & span:nth-child(1) {
+            top: 11px;
+            transform: rotate(-45deg);
+        }
+
+        & span:nth-child(2) {
+            top: 11px;
+            transform: rotate(45deg);
+            width: 24px;
+        }
+    }
+
+    .nav__links {
+        width: 100%;
+        transition: 0.4s;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        left: 100%;
+        background-color: var(--colorBackground);
+        flex-direction: column;
+        padding-left: 16px;
+        padding-top: 95px;
+
+        & a {
+            font-size: 32px;
+        }
+
+        & .language-box {
+            & #languageButton {
+                font-size: 32px;
+            }
+
+            & .language-box-buttons {
+                & button {
+                    font-size: 32px
+                }
+            }
+        }
+    }
+
+    .nav__links._active {
+        left: 0;
+    }
+}
+
+@media (max-width: 600px) {
+    .footer__elements {
+        flex-direction: column;
+        align-items: center;
+
+        & .footer__info {
+            margin-bottom: 35px;
+
+            & img {
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .about-me {
+        .about-me__photo {
+            width: 300px;
+        }
+    }
+}
