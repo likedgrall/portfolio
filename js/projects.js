@@ -115,3 +115,4 @@ if (savedLang == "ru") {
 else if (savedLang == "en") {
     PageRender("en");
 }
+

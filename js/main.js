@@ -151,4 +151,3 @@ else if (savedLang == "en") {
     PageRender("en");
 }
 
-

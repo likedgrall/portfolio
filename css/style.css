@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -490,6 +491,12 @@ header {
                         background-color: #abb2bf21;
                     }
                 }
+
+                & .not_active {
+                    border: 1px solid var(--colorText3);
+                    color: var(--colorText3);
+                    pointer-events: none;
+                }
             }
 
         }
@@ -497,6 +504,94 @@ header {
     }
 
     
+}
+
+.small-projects {
+
+    & h2 {
+        margin-bottom: 50px;
+    }
+    & .small-projects__elements {
+        display: flex;
+        gap: 16px;
+        flex-wrap: wrap;
+        align-items: top;
+        justify-content: center;
+
+        & .small-project__item {
+            display: flex;
+            flex-direction: column;
+            max-width: 445px;
+            width: 100%;
+            min-width: 340px;
+            border: 1px solid var(--colorText3);
+            margin-bottom: 15px;
+
+            & img {
+                height: 250px;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            & span {
+                padding: 16px;
+                font-size: 16px;
+                display: flex;
+                gap: 8px;
+                color: var(--colorText3);
+                border-top: 1px solid var(--colorText3);
+                border-bottom: 1px solid var(--colorText3);
+            }
+        }
+        & .small-project__info {
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+            padding: 16px;
+            color: var(--colorText1);
+
+            & .small-project__info-text {
+                gap: 16px;
+                display: flex;
+                flex-direction: column;
+
+                & p {
+                    color: var(--colorText3);
+                    margin-bottom: 16px;
+                    line-height: 150%;
+                }
+            }
+
+            & .small-project__info-buttons {
+                display: flex;
+                gap: 16px;
+
+                & a {
+                    padding: 8px 16px;
+                    background-color: transparent;
+                    border: 1px solid var(--colorText2);
+                    color: var(--colorText1);
+                    transition: 0.5s;
+                    text-decoration: none;
+
+                    &:hover {
+                        background-color: #c778dd20;
+                    }
+                }
+
+                & .cached-button {
+                    border: 1px solid var(--colorText3);
+                    color: var(--colorText3);
+
+                    &:hover {
+                        background-color: #abb2bf21;
+                    }
+                }
+            }
+
+        }
+    }
 }
 
 .skills {
