@@ -21,6 +21,17 @@ body {
   }
 }
 
+@media (max-width: 1170px) {
+  /* Адаптация section About-me */
+  .about-me {
+    & .about-me__elements {
+      & p {
+        font-size: 14px;
+      }
+    }
+  }
+}
+
 @media (max-width: 1000px) {
   /* Адаптация Header */
   header {
@@ -61,6 +72,9 @@ body {
     }
     & .about-me__elements {
       flex-direction: column;
+      & p {
+        font-size: 16px;
+      }
     }
   }
 
