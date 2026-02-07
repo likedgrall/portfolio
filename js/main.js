@@ -101,10 +101,11 @@ document.addEventListener('DOMContentLoaded', function() {
 personData.onclick = function () {
   mainWrapper.classList.add("_show");
   modalBlock.classList.add("_show");
-
+  body.classList.add("scroll-none");
 }
 
 closeButton.addEventListener("click", function () {
   mainWrapper.classList.remove("_show");
   modalBlock.classList.remove("_show");
+  body.classList.remove("scroll-none");
 });
