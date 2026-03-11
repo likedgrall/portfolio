@@ -252,7 +252,16 @@ body {
     }
   }
 
-  /*  */
+  /* Адаптация процесса работы */
+
+  .process .process__card {
+    width: 100%;
+  }
+
+  .process .process__bottom {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
 @media (max-width: 525px) {
@@ -309,6 +318,25 @@ body {
       gap: 28px;
     }
   }
+
+  /* Адаптация Процесса работы */
+
+  .process .process__card-title {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .process .process__card-title h3 {
+    margin-top: 50px;
+    text-align: center;
+    padding: 0;
+    margin-bottom: 10px;
+  }
+
+  .process .process__number {
+    right: 50%;
+    transform: translateX(50%);
+  }
 }
 
 @media (max-width: 400px) {
@@ -346,37 +374,13 @@ body {
     }
   }
 
-  /* Адаптация section Price */
-  .price {
-    & .price__elements {
-      & .card__price {
-        & .price-title {
-          & p {
-            font-size: 14px;
-          }
-        }
+  /* Адаптация процесса работы */
 
-        & .price-advantage {
-          & ul {
-            & li {
-              font-size: 14px;
-            }
-          }
-        }
+  .process .process__card-title {
+    padding: 20px 16px;
+  }
 
-        & .price-action {
-          & p {
-            font-size: 14px;
-            color: var(--color2);
-            font-weight: 400;
-            text-align: center;
-            margin: 0;
-          }
-        }
-        & a {
-          font-size: 16px !important;
-        }
-      }
-    }
+  .process .process__elements {
+    gap: 40px;
   }
 }

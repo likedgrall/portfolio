@@ -400,7 +400,7 @@ header {
   }
 }
 
-.price {
+/* .price {
   border-radius: 24px;
   background-color: #4f7ef50f;
   background-size: 400%;
@@ -522,14 +522,12 @@ header {
           margin: 0;
         }
 
-        /* Стилизация текста с ценой - делаем его крупным */
         & p:first-child {
           font-size: 14px;
           color: var(--color2);
           margin-bottom: 5px;
         }
 
-        /* Если хотите сделать цену еще крупнее, добавьте */
         & p:first-child::after {
           content: "";
           display: block;
@@ -570,6 +568,146 @@ header {
       }
     }
   }
+} */
+
+.process {
+  border-radius: 24px;
+  background-color: #4f7ef50f;
+  background-size: 400%;
+  background-repeat: no-repeat;
+  animation: headerBg 5s infinite linear alternate-reverse;
+  box-shadow: 0px 0px 30px #4f7ef50f;
+}
+
+.process h2 {
+  font-size: 46px;
+  text-align: center;
+  color: var(--color2);
+  font-weight: 800;
+  line-height: 115%;
+  margin-bottom: 20px;
+}
+
+.process .process__subtitle {
+  max-width: 760px;
+  margin: 0 auto 60px auto;
+  text-align: center;
+  font-size: 18px;
+  line-height: 160%;
+  color: var(--color3);
+}
+
+.process .process__elements {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 28px;
+}
+
+.process .process__card {
+  width: calc(50% - 14px);
+  max-width: 520px;
+  box-shadow: 0px 0px 10px var(--color3Shadow);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  text-align: left;
+  border: 1px solid #e5e7eb;
+  transition: all 0.3s ease;
+  background-color: white;
+  position: relative;
+}
+
+.process .process__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 10px 25px var(--color3Shadow);
+  border: 1px solid rgba(79, 125, 245, 0.18);
+}
+
+.process .process__card-title {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  padding: 28px 24px;
+  width: 100%;
+  position: relative;
+}
+
+.process .process__number {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 44px;
+  font-weight: 800;
+  line-height: 1;
+  color: rgba(79, 125, 245, 0.12);
+  pointer-events: none;
+  transition: color 0.3s ease;
+  margin-left: 30px;
+}
+
+.process .process__card:hover .process__number {
+  color: rgba(79, 125, 245, 0.22);
+}
+
+.process .process__card-title h3 {
+  font-size: 24px;
+  color: var(--color2);
+  margin: 0;
+  padding-right: 70px;
+  line-height: 120%;
+}
+
+.process .process__card-title p {
+  line-height: 160%;
+  font-size: 16px;
+  color: var(--color3);
+  font-weight: 400;
+  margin: 0;
+  text-align: left;
+}
+
+.process .process__bottom {
+  margin-top: 35px;
+  box-shadow: 0px 0px 20px var(--color3Shadow);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  border: 1px solid #e5e7eb;
+  background-color: white;
+  padding: 24px 24px;
+}
+
+.process .process__bottom p {
+  font-size: 15px;
+  color: var(--color3);
+  line-height: 160%;
+  margin: 0;
+  max-width: 780px;
+}
+
+.process .process__bottom a {
+  background-color: var(--colorMain);
+  padding: 16px 24px;
+  border-radius: 12px;
+  font-size: 18px;
+  text-align: center;
+  cursor: pointer;
+  text-decoration: none;
+  border: 2px solid var(--colorMain);
+  color: white;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  white-space: nowrap;
+}
+
+.process .process__bottom a:hover {
+  background-color: #3e62be;
+  border-color: #3e62be;
 }
 
 .faq {
