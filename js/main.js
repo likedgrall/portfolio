@@ -46,7 +46,27 @@ hamburger.addEventListener('click', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
+  const projectFilters = document.querySelectorAll('.projects__filter');
+  const projectCards = document.querySelectorAll('.project__item');
   const faqItems = document.querySelectorAll('.faq__item');
+
+  projectFilters.forEach(button => {
+    button.addEventListener('click', function () {
+      const currentFilter = this.dataset.filter;
+
+      projectFilters.forEach(filterButton => {
+        filterButton.classList.remove('is-active');
+      });
+
+      this.classList.add('is-active');
+
+      projectCards.forEach(card => {
+        const category = card.dataset.category;
+        const shouldShow = currentFilter === 'all' || category === currentFilter;
+        card.classList.toggle('is-hidden', !shouldShow);
+      });
+    });
+  });
   
   // Функция обновления высоты закрытого состояния
   function updateClosedHeights() {
