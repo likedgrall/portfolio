@@ -12,7 +12,7 @@ const projectModalSections = document.querySelectorAll(".project-modal__section 
 const mainWrapper = document.querySelector(".main-wrapper");
 const modalBlock = document.querySelector(".modal-block");
 const personData = document.querySelector(".personal");
-const closeButton = document.querySelector(".fa-xmark");
+const closePolicyButton = document.querySelector(".js-close-policy-modal");
 
 // hamburger.onclick = function () {
 //   hamburger.classList.toggle("hamburger_active");
@@ -184,14 +184,39 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-personData.onclick = function () {
+function openPolicyModal() {
+  if (!mainWrapper || !modalBlock) {
+    return;
+  }
+
   mainWrapper.classList.add("_show");
   modalBlock.classList.add("_show");
   body.classList.add("scroll-none");
 }
 
-closeButton.addEventListener("click", function () {
+function closePolicyModal() {
+  if (!mainWrapper || !modalBlock) {
+    return;
+  }
+
   mainWrapper.classList.remove("_show");
   modalBlock.classList.remove("_show");
-  body.classList.remove("scroll-none");
+  if (!projectModal?.classList.contains("is-open") && !document.querySelector(".nav__links.nav__links_active")) {
+    body.classList.remove("scroll-none");
+  }
+}
+
+personData?.addEventListener("click", openPolicyModal);
+closePolicyButton?.addEventListener("click", closePolicyModal);
+
+mainWrapper?.addEventListener("click", function (event) {
+  if (event.target === mainWrapper) {
+    closePolicyModal();
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && mainWrapper?.classList.contains("_show")) {
+    closePolicyModal();
+  }
 });
