@@ -77,167 +77,357 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2>Мои проекты</h2>
+            <div class="projects__intro">
+                <p>
+                    Здесь не просто примеры дизайна, а реальные решения под разные задачи: сбор заявок, презентация
+                    услуги, онлайн-продажа и удобный пользовательский сценарий. Можно быстро отфильтровать проекты по
+                    типу и посмотреть, какую пользу даёт каждый сайт.
+                </p>
+                <div class="projects__filters" aria-label="Фильтр проектов">
+                    <button class="projects__filter is-active" type="button" data-filter="all">Все</button>
+                    <button class="projects__filter" type="button" data-filter="webapp">Веб-приложения</button>
+                    <button class="projects__filter" type="button" data-filter="landing">Лендинги</button>
+                </div>
+            </div>
             <div class="projects__list">
-                <div class="project__item">
-                    <div class="project__description">
-                        <img src="./img/projectFotoCoffee.svg" alt="">
+                <article class="project__item" data-category="webapp">
+                    <div class="project__top">
+                        <img src="./img/projectFotoCoffee.svg" alt="Превью проекта Тренинг-планер">
+                        <div class="project__meta">
+                            <span class="project__type">Веб-приложение</span>
+                            <div class="project__stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
+                        <h3>Тренинг-планер</h3>
+                        <p class="project__lead">
+                            Подбирает тренировочный план под параметры пользователя и помогает быстро перейти от интереса
+                            к конкретной программе занятий.
+                        </p>
+                        <div class="project__benefits">
+                            <span>ИИ-помощник</span>
+                            <span>Подбор по параметрам</span>
+                            <span>Обучение тренировкам</span>
+                        </div>
+                        <div class="project__facts">
+                            <div>
+                                <strong>Задача</strong>
+                                <span>Сделать полезный сервис для подбора самостоятельных тренировок. Гид по мышцам.</span>
+                            </div>
+                            <div>
+                                <strong>Польза</strong>
+                                <span>Пользователь получает понятный гайд и план тренировок без лишних усилий.</span>
+                            </div>
+                        </div>
+                        <details class="project__details">
+                            <summary>Что реализовано</summary>
+                            <p>Интерактивная схема мышц, экран с упражнениями и генерация плана по полу, весу, росту, возрасту, уровню и времени тренировки с помощью ИИ.</p>
+                        </details>
+                    </div>
+                    <div class="project__actions">
+                        <a target="_blank" href="https://likedgrall.github.io/interactive-menu/">Посмотреть проект</a>
+                        <a class="project__action-secondary" href="#contact">Хочу похожее решение</a>
+                    </div>
+                </article>
+                <article class="project__item" data-category="webapp">
+                    <div class="project__top">
+                        <img src="./img/projectFotoCoffee.svg" alt="Превью проекта Интерактивное меню">
+                        <div class="project__meta">
+                            <span class="project__type">Веб-приложение</span>
+                            <div class="project__stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                                <span>Python</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
                         <h3>Интерактивное меню</h3>
-                        <p>
-                            <b>Задача:</b> сделать веб-приложение, которое облегчает работу официантам, делая их работу
-                            практически автоматизированно.
-                            <br>
-                            <br>
-                            <b>Что сделал:</b> разработал веб-приложение, по-которому можно войти по QR-коду, сделать
-                            заказ выбрав определенные блюда, выбрать способ оплаты, все это приходит
-                            официанту через телеграмм бот.
-                            <br>
-                            <br>
-                            <b>Результат:</b> работающее веб-приложение, облегчает работу официантам, заказы выполняются
-                            быстрее.
+                        <p class="project__lead">
+                            Упрощает заказ в заведении: клиент сканирует QR, выбирает блюда и отправляет заказ без лишней нагрузки на персонал.
                         </p>
+                        <div class="project__benefits">
+                            <span>QR-вход</span>
+                            <span>Заказ со смартфона</span>
+                            <span>Telegram-бот</span>
+                        </div>
+                        <div class="project__facts">
+                            <div>
+                                <strong>Задача</strong>
+                                <span>Сократить путь от выбора блюда до передачи заказа.</span>
+                            </div>
+                            <div>
+                                <strong>Польза</strong>
+                                <span>Официанты тратят меньше времени на рутину, заказы обрабатываются быстрее.</span>
+                            </div>
+                        </div>
+                        <details class="project__details">
+                            <summary>Что реализовано</summary>
+                            <p>Вход по QR-коду, выбор позиций и способа оплаты, а также отправка данных официанту через Telegram-бота.</p>
+                        </details>
                     </div>
-                    <div class="project__description">
-                        <span>Сделан на: HTML, CSS, JS, Python</span>
-                        <a target="_blank" href="https://likedgrall.github.io/interactive-menu/">Посмотреть</a>
+                    <div class="project__actions">
+                        <a target="_blank" href="https://likedgrall.github.io/interactive-menu/">Посмотреть проект</a>
+                        <a class="project__action-secondary" href="#contact">Хочу похожее решение</a>
                     </div>
-                </div>
-                <div class="project__item">
-                    <div class="project__description">
-                        <img src="./img/projectFotoGym.svg" alt="">
+                </article>
+                <article class="project__item" data-category="landing">
+                    <div class="project__top">
+                        <img src="./img/projectFotoGym.svg" alt="Превью проекта Марафон похудения">
+                        <div class="project__meta">
+                            <span class="project__type">Лендинг</span>
+                            <div class="project__stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
                         <h3>Марафон похудения</h3>
-                        <p>
-                            <b>Задача:</b> сделать сайт для онлайн-марафона похудения, где пользователи могут узнать о
-                            программе тренировок и оплатить участие.
-                            <br>
-                            <br>
-                            <b>Что сделал:</b> разработал лендинг с описанием марафона, программой тренировок, блоками с
-                            информацией и адаптацией под мобильные устройства.
-                            <br>
-                            <br>
-                            <b>Результат:</b> получился удобный сайт, через который пользователи могут быстро узнать о
-                            марафоне и записаться на участие.
+                        <p class="project__lead">
+                            Продающая страница для онлайн-марафона, где человек быстро понимает программу, формат участия и следующий шаг.
                         </p>
+                        <div class="project__benefits">
+                            <span>Описание программы</span>
+                            <span>Мобильная адаптация</span>
+                            <span>Запись на участие</span>
+                        </div>
+                        <div class="project__facts">
+                            <div>
+                                <strong>Задача</strong>
+                                <span>Показать ценность марафона и довести до заявки.</span>
+                            </div>
+                            <div>
+                                <strong>Польза</strong>
+                                <span>Пользователь быстро понимает, подходит ли ему участие.</span>
+                            </div>
+                        </div>
+                        <details class="project__details">
+                            <summary>Что реализовано</summary>
+                            <p>Блоки с описанием марафона, структуры тренировок, преимуществ и удобной адаптацией под мобильные устройства.</p>
+                        </details>
                     </div>
-                    <div class="project__description">
-                        <span>Сделан на: HTML, CSS, JS</span>
-                        <a target="_blank" href="https://likedgrall.github.io/marafon1/">Посмотреть</a>
+                    <div class="project__actions">
+                        <a target="_blank" href="https://likedgrall.github.io/marafon1/">Посмотреть проект</a>
+                        <a class="project__action-secondary" href="#contact">Хочу похожее решение</a>
                     </div>
-                </div>
-                <div class="project__item">
-                    <div class="project__description">
-                        <img src="./img/projectFotoTravel.svg" alt="">
+                </article>
+                <article class="project__item" data-category="landing">
+                    <div class="project__top">
+                        <img src="./img/projectFotoTravel.svg" alt="Превью проекта Заказное путешествие">
+                        <div class="project__meta">
+                            <span class="project__type">Лендинг</span>
+                            <div class="project__stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
                         <h3>Заказное путешествие</h3>
-                        <p>
-                            <b>Задача:</b> сделать сайт для продажи авторских туров с описанием направлений и сбором
-                            заявок.
-                            <br>
-                            <br>
-                            <b>Что сделал:</b> разработал лендинг с турами, отзывами, контактами и формой для бесплатной
-                            консультации.
-                            <br>
-                            <br>
-                            <b>Результат:</b> получился удобный сайт, который показывает направления, вызывает доверие и
-                            помогает получать заявки от клиентов.
+                        <p class="project__lead">
+                            Лендинг для авторских туров, который показывает направления, создаёт доверие и подводит к консультации.
                         </p>
+                        <div class="project__benefits">
+                            <span>Презентация туров</span>
+                            <span>Отзывы</span>
+                            <span>Сбор заявок</span>
+                        </div>
+                        <div class="project__facts">
+                            <div>
+                                <strong>Задача</strong>
+                                <span>Продать идею путешествия через структуру и эмоцию.</span>
+                            </div>
+                            <div>
+                                <strong>Польза</strong>
+                                <span>Посетитель видит маршрут, доверие и может сразу оставить заявку.</span>
+                            </div>
+                        </div>
+                        <details class="project__details">
+                            <summary>Что реализовано</summary>
+                            <p>Карточки направлений, отзывы, контакты и форма для бесплатной консультации по подбору тура.</p>
+                        </details>
                     </div>
-                    <div class="project__description">
-                        <span>Сделан на: HTML, CSS</span>
-                        <a target="_blank" href="https://likedgrall.github.io/New-Irland/">Посмотреть</a>
+                    <div class="project__actions">
+                        <a target="_blank" href="https://likedgrall.github.io/New-Irland/">Посмотреть проект</a>
+                        <a class="project__action-secondary" href="#contact">Хочу похожее решение</a>
                     </div>
-                </div>
-                <div class="project__item">
-                    <div class="project__description">
-                        <img src="./img/projectFotoProforientolog.svg" alt="">
+                </article>
+                <article class="project__item" data-category="landing">
+                    <div class="project__top">
+                        <img src="./img/projectFotoProforientolog.svg" alt="Превью проекта Сайт для профориентолога">
+                        <div class="project__meta">
+                            <span class="project__type">Лендинг</span>
+                            <div class="project__stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                                <span>Apps Script</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
                         <h3>Сайт для профориентолога</h3>
-                        <p>
-                            <b>Задача:</b> сделать сайт для профориентолога, чтобы кратко показать услуги, вызвать
-                            доверие и собирать заявки на консультацию.
-                            <br>
-                            <br>
-                            <b>Что сделал:</b> разработал лендинг с описанием направлений, блоком «Обо мне», отзывами,
-                            контактами и формой записи. Также сделал сайт с быстрой загрузкой, чтобы пользователю было
-                            удобно сразу ознакомиться с услугами и оставить заявку.
-                            <br>
-                            <br>
-                            <b>Результат:</b> получился понятный и удобный сайт, который помогает презентовать услуги
-                            профориентолога, усиливает доверие и приводит клиентов на консультацию.
+                        <p class="project__lead">
+                            Помогает эксперту понятно показать услуги, усилить доверие и превратить интерес посетителя в запись на консультацию.
                         </p>
+                        <div class="project__benefits">
+                            <span>Услуги и кейсы</span>
+                            <span>Блок доверия</span>
+                            <span>Форма записи</span>
+                        </div>
+                        <div class="project__facts">
+                            <div>
+                                <strong>Задача</strong>
+                                <span>Кратко и убедительно презентовать экспертные услуги.</span>
+                            </div>
+                            <div>
+                                <strong>Польза</strong>
+                                <span>Клиент быстро понимает, чем помогает специалист и как записаться.</span>
+                            </div>
+                        </div>
+                        <details class="project__details">
+                            <summary>Что реализовано</summary>
+                            <p>Лендинг с описанием направлений, блоком «Обо мне», отзывами, формой записи и быстрой загрузкой страниц.</p>
+                        </details>
                     </div>
-                    <div class="project__description">
-                        <span>Сделан на: HTML, CSS, JS, Apps Script</span>
-                        <a target="_blank" href="https://proforientolog-olga.ru/">Посмотреть</a>
+                    <div class="project__actions">
+                        <a target="_blank" href="https://proforientolog-olga.ru/">Посмотреть проект</a>
+                        <a class="project__action-secondary" href="#contact">Хочу похожее решение</a>
                     </div>
-                </div>
-                <div class="project__item">
-                    <div class="project__description">
-                        <img src="./img/projectFotoNike.svg" alt="">
+                </article>
+                <article class="project__item" data-category="landing">
+                    <div class="project__top">
+                        <img src="./img/projectFotoNike.svg" alt="Превью проекта Nike кроссовки">
+                        <div class="project__meta">
+                            <span class="project__type">Каталог / лендинг</span>
+                            <div class="project__stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
                         <h3>Nike кроссовки</h3>
-                        <p>
-                            <b>Задача:</b> сделать сайт магазина кроссовок, чтобы показать ассортимент и упростить выбор
-                            модели для покупателей.
-                            <br>
-                            <br>
-                            <b>Что сделал:</b> разработал рекламный сайт с каталогом товаров, карточками кроссовок,
-                            возможностью просматривать детали модели и
-                            удобно перемещаться по ассортименту.
-                            <br>
-                            <br>
-                            <b>Результат:</b> получился удобный сайт, который помогает пользователям быстро подобрать
-                            кроссовки и оформить заказ.
+                        <p class="project__lead">
+                            Каталоговый сайт, который помогает быстро сравнить модели, посмотреть детали и упростить выбор товара.
                         </p>
+                        <div class="project__benefits">
+                            <span>Каталог моделей</span>
+                            <span>Быстрый выбор</span>
+                            <span>Фокус на товаре</span>
+                        </div>
+                        <div class="project__facts">
+                            <div>
+                                <strong>Задача</strong>
+                                <span>Сделать ассортимент понятным и визуально привлекательным.</span>
+                            </div>
+                            <div>
+                                <strong>Польза</strong>
+                                <span>Покупателю проще выбрать модель и перейти к оформлению.</span>
+                            </div>
+                        </div>
+                        <details class="project__details">
+                            <summary>Что реализовано</summary>
+                            <p>Каталог кроссовок с карточками товаров, деталями моделей и удобной навигацией по ассортименту.</p>
+                        </details>
                     </div>
-                    <div class="project__description">
-                        <span>Сделан на: HTML, CSS, JS</span>
-                        <a target="_blank" href="https://likedgrall.github.io/Nike-boots-shop/">Посмотреть</a>
+                    <div class="project__actions">
+                        <a target="_blank" href="https://likedgrall.github.io/Nike-boots-shop/">Посмотреть проект</a>
+                        <a class="project__action-secondary" href="#contact">Хочу похожее решение</a>
                     </div>
-                </div>
-                <div class="project__item">
-                    <div class="project__description">
-                        <img src="./img/projectFotoInterior.svg" alt="">
+                </article>
+                <article class="project__item" data-category="multipage">
+                    <div class="project__top">
+                        <img src="./img/projectFotoInterior.svg" alt="Превью проекта Дизайн интерьера">
+                        <div class="project__meta">
+                            <span class="project__type">Лендинг</span>
+                            <div class="project__stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
                         <h3>Дизайн интерьера</h3>
-                        <p>
-                            <b>Задача:</b> сделать сайт для студии дизайна интерьера, чтобы показать услуги, проекты и
-                            дать клиентам возможность связаться со студией.
-                            <br>
-                            <br>
-                            <b>Что сделал:</b> разработал сайт с несколькими страницами: главная, информация о студии и
-                            команде, галерея проектов и страница контактов с формой обратной связи и картой. Также
-                            реализовал удобную навигацию и понятную структуру сайта.
-                            <br>
-                            <br>
-                            <b>Результат:</b> получился визуально привлекательный сайт-портфолио, который демонстрирует
-                            работы студии, усиливает доверие клиентов и помогает получать новые заявки.
+                        <p class="project__lead">
+                            Сайт-портфолио студии, который показывает уровень работ, знакомит с командой и подводит к обращению.
                         </p>
+                        <div class="project__benefits">
+                            <span>Галерея проектов</span>
+                            <span>Структура по разделам</span>
+                            <span>Контакты и карта</span>
+                        </div>
+                        <div class="project__facts">
+                            <div>
+                                <strong>Задача</strong>
+                                <span>Показать студию как надёжного исполнителя с кейсами.</span>
+                            </div>
+                            <div>
+                                <strong>Польза</strong>
+                                <span>Клиент может изучить работы, команду и сразу связаться.</span>
+                            </div>
+                        </div>
+                        <details class="project__details">
+                            <summary>Что реализовано</summary>
+                            <p>Несколько страниц: главная, о студии, галерея проектов и контакты с формой обратной связи и картой.</p>
+                        </details>
                     </div>
-                    <div class="project__description">
-                        <span>Сделан на: HTML, CSS, JS</span>
-                        <a target="_blank" href="https://likedgrall.github.io/interior/">Посмотреть</a>
+                    <div class="project__actions">
+                        <a target="_blank" href="https://likedgrall.github.io/interior/">Посмотреть проект</a>
+                        <a class="project__action-secondary" href="#contact">Хочу похожее решение</a>
                     </div>
-                </div>
-                <div class="project__item">
-                    <div class="project__description">
-                        <img src="./img/projectFotoPortfolio.svg" alt="">
+                </article>
+                <article class="project__item" data-category="landing">
+                    <div class="project__top">
+                        <img src="./img/projectFotoPortfolio.svg" alt="Превью проекта Портфолио">
+                        <div class="project__meta">
+                            <span class="project__type">Лендинг</span>
+                            <div class="project__stack">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project__content">
                         <h3>Портфолио</h3>
-                        <p>
-                            <b>Задача:</b> сделать сайт-портфолио веб-разработчика, чтобы показать услуги, работы и
-                            получать заявки от клиентов.
-                            <br>
-                            <br>
-                            <b>Что сделал:</b> разработал лендинг с блоком об авторе, описанием
-                            процесса работы, контактной формой и кнопками для связи, чтобы клиент мог быстро
-                            ознакомиться с услугами и оставить заявку.
-                            <br>
-                            <br>
-                            <b>Результат:</b> получился понятный сайт-визитка, который помогает презентовать услуги
-                            разработчика и привлекать новых клиентов.
+                        <p class="project__lead">
+                            Личный сайт разработчика, который показывает услуги, работы, процесс сотрудничества и ведёт к заявке.
                         </p>
+                        <div class="project__benefits">
+                            <span>Услуги</span>
+                            <span>Кейсы</span>
+                            <span>Контактная форма</span>
+                        </div>
+                        <div class="project__facts">
+                            <div>
+                                <strong>Задача</strong>
+                                <span>Собрать в одном месте презентацию услуг и примеры работ.</span>
+                            </div>
+                            <div>
+                                <strong>Польза</strong>
+                                <span>Клиент быстро оценивает уровень, стиль и может оставить заявку.</span>
+                            </div>
+                        </div>
+                        <details class="project__details">
+                            <summary>Что реализовано</summary>
+                            <p>Лендинг с информацией об авторе, процессом работы, контактной формой и быстрыми способами связи.</p>
+                        </details>
                     </div>
-                    <div class="project__description">
-                        <span>Сделан на: HTML, CSS</span>
-                        <a target="_blank" href="https://likedgrall.github.io/web-developer-lending/">Посмотреть</a>
+                    <div class="project__actions">
+                        <a target="_blank" href="https://likedgrall.github.io/web-developer-lending/">Посмотреть проект</a>
+                        <a class="project__action-secondary" href="#contact">Хочу похожее решение</a>
                     </div>
-                </div>
-
+                </article>
             </div>
         </div>
     </section>

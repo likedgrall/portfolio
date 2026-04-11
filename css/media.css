@@ -22,6 +22,14 @@ body {
 }
 
 @media (max-width: 1170px) {
+  header h1 {
+    font-size: 46px !important;
+  }
+
+  header .title {
+    margin-left: 0 !important;
+  }
+
   /* Адаптация section About-me */
   .about-me {
     & .about-me__elements {
@@ -35,7 +43,7 @@ body {
 @media (max-width: 1000px) {
   /* Адаптация Header */
   header {
-    max-height: 100%;
+    max-height: 100vh;
     height: auto;
     & .header__elements {
       flex-direction: column-reverse;
@@ -47,9 +55,10 @@ body {
         align-items: center;
         & .title {
           & h1 {
-            text-align: center;
-            font-size: 40px;
+            text-align: center !important;
+            font-size: 40px !important;
             margin-bottom: 10px;
+            margin: 0 0 28px 0;
           }
           & hr {
             display: none;
@@ -75,6 +84,12 @@ body {
       & p {
         font-size: 16px;
       }
+    }
+  }
+
+  .projects {
+    & .projects__list {
+      grid-template-columns: 1fr;
     }
   }
 
@@ -114,16 +129,34 @@ body {
       margin-bottom: 50px;
     }
 
+    & .projects__intro {
+      margin-bottom: 34px;
+
+      & p {
+        font-size: 15px;
+      }
+    }
+
     & .projects__list {
-      padding: 50px 20px;
+      padding: 20px 20px 32px;
       position: relative;
       width: 100vw;
       left: -20px;
       flex-wrap: nowrap;
+      display: flex;
       overflow-x: auto;
       overflow-y: hidden;
       justify-content: start;
       pointer-events: visible;
+      gap: 18px;
+      scroll-snap-type: x proximity;
+
+      & .project__item {
+        min-width: clamp(420px, 72vw, 560px);
+        max-width: clamp(420px, 72vw, 560px);
+        scroll-snap-align: start;
+      }
+
       &::-webkit-scrollbar {
         height: 7px; /* Высота горизонтального скроллбара */
       }
@@ -264,12 +297,143 @@ body {
   }
 }
 
+@media (max-width: 560px) {
+  .projects {
+    & .projects__filters {
+      justify-content: flex-start;
+
+      & .projects__filter {
+        padding: 10px 14px;
+        font-size: 16px;
+      }
+    }
+
+    & .projects__list {
+      & .project__item {
+        min-width: min(84vw, 430px);
+        max-width: min(84vw, 430px);
+        padding: 20px;
+        gap: 16px;
+
+        & .project__top {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        & img {
+          width: 78px;
+          height: 78px;
+          padding: 10px;
+          border-radius: 16px;
+        }
+
+        & .project__meta {
+          gap: 10px;
+        }
+
+        & .project__type {
+          font-size: 11px;
+          padding: 7px 10px;
+        }
+
+        & .project__stack {
+          gap: 6px;
+
+          & span {
+            font-size: 12px;
+            padding: 6px 9px;
+          }
+        }
+
+        & .project__content {
+          gap: 14px;
+
+          & h3 {
+            font-size: 21px;
+          }
+
+          & .project__lead {
+            font-size: 14px;
+            line-height: 145%;
+          }
+        }
+
+        & .project__benefits {
+          gap: 8px;
+
+          & span {
+            font-size: 12px;
+            padding: 7px 9px;
+            border-radius: 10px;
+          }
+        }
+
+        & .project__facts {
+          grid-template-columns: 1fr;
+
+          & div {
+            padding: 12px;
+            gap: 6px;
+            border-radius: 16px;
+          }
+
+          & strong {
+            font-size: 12px;
+          }
+
+          & span {
+            font-size: 13px;
+            line-height: 140%;
+          }
+        }
+
+        & .project__details {
+          padding-top: 14px;
+
+          & summary {
+            font-size: 13px;
+          }
+
+          & p {
+            font-size: 13px;
+            line-height: 150%;
+          }
+        }
+
+        & .project__actions {
+          gap: 10px;
+
+          & a {
+            flex-basis: 100%;
+            padding: 12px;
+            font-size: 14px;
+            border-radius: 12px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 450px) {
+  .projects {
+    & .projects__list {
+      & .project__item {
+        min-width: 90vw;
+        max-width: 90vw;
+        padding: 18px;
+      }
+    }
+  }
+}
+
 @media (max-width: 525px) {
   /* Адаптация Header */
   header {
     & .header__elements {
       flex-direction: column-reverse;
-      gap: 60px;
+      gap: 40px !important;
 
       & .header__info {
         justify-content: center;
@@ -277,8 +441,8 @@ body {
         & .title {
           & h1 {
             text-align: center;
-            font-size: 30px;
-            margin-bottom: 10px;
+            font-size: 30px !important;
+            margin-bottom: 20px !important;
           }
           & hr {
             display: none;
@@ -295,6 +459,7 @@ body {
       }
       & img {
         max-width: 350px;
+
       }
     }
   }
