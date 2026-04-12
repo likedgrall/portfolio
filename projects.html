@@ -1,0 +1,94 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Подборка проектов в едином стиле портфолио: карточки, стек технологий и ссылки на демо.">
+    <title>Проекты</title>
+    <link rel="icon" href="./img/logo.svg">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="stylesheet" href="./css/projects.css">
+    <link href="https://cdn.jsdelivr.net/gh/oathanrex/font-awesome-pro@main/fontawesome-pro-6.5.2-web/css/all.min.css" rel="stylesheet">
+</head>
+
+<body class="projects-page">
+    <nav>
+        <div class="container">
+            <div class="nav__elements">
+                <a id="logoLink" href="index.html#main">
+                    <img src="./img/logo.svg" alt="Логотип сайта">
+                </a>
+                <div class="nav__links">
+                    <a href="index.html#projects"><i class="fa-solid fa-hands-holding-circle"></i>Проекты</a>
+                    <a href="index.html#aboutMe"><i class="fa-solid fa-user"></i>Обо мне</a>
+                    <a href="index.html#process"><i class="fa-solid fa-dollar-sign"></i>Процесс работы</a>
+                    <a href="index.html#faq"><i class="fa-solid fa-circle-question"></i>FAQ</a>
+                    <a href="index.html#contact"><i class="fa-solid fa-user-pen"></i>Обратная связь</a>
+                </div>
+                <div class="nav__contacts">
+                    <a href="https://t.me/likedgrall"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://vk.com/likedgrallwebdeveloper"><i class="fa-brands fa-vk"></i></a>
+                </div>
+                <button class="hamburger" type="button" aria-label="Открыть меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="projects project-library" id="library">
+            <div class="container">
+                <h2>Мои проекты</h2>
+                <div class="projects__intro">
+                    <p>
+                        Здесь собраны все мои работы. На каждый сайт можно зайти и взглянуть на него по кнопке "Посмотреть проект".
+                    </p>
+                    <div class="projects__filters" aria-label="Фильтры проектов">
+                        <button class="projects__filter is-active" type="button" data-filter="all">Все</button>
+                        <button class="projects__filter" type="button" data-filter="webapp">Веб-приложения</button>
+                        <button class="projects__filter" type="button" data-filter="landing">Лендинги</button>
+                    </div>
+                </div>
+
+                <div class="projects__list">
+                    <!-- Контент сгенерирован JavaScript -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="project-modal" aria-hidden="true">
+        <div class="project-modal__backdrop js-close-modal"></div>
+        <div class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+            <button class="project-modal__close js-close-modal" type="button" aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2 id="projectModalTitle" class="project-modal__title"></h2>
+
+            <div class="project-modal__sections">
+                <section class="project-modal__section">
+                    <h3>Задача</h3>
+                    <p></p>
+                </section>
+                <section class="project-modal__section">
+                    <h3>Решение</h3>
+                    <p></p>
+                </section>
+                <section class="project-modal__section">
+                    <h3>Результат</h3>
+                    <p></p>
+                </section>
+            </div>
+        </div>
+    </div>
+
+    <script src="./js/store.js"></script>
+    <script src="./js/projects.js"></script>
+</body>
+
+</html>

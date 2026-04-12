@@ -4,6 +4,10 @@ const navLinks = document.querySelector(".nav__links");
 const navLinksAll = document.querySelector(".nav__links a")
 const navLogo = document.querySelector("#logoLink");
 const navContacts = document.querySelector(".nav__contacts");
+const projectModal = document.querySelector(".project-modal");
+const projectModalTitle = document.querySelector("#projectModalTitle");
+const projectModalHeadline = document.querySelector(".project-modal__field strong");
+const projectModalSections = document.querySelectorAll(".project-modal__section p");
 
 const mainWrapper = document.querySelector(".main-wrapper");
 const modalBlock = document.querySelector(".modal-block");
@@ -43,6 +47,68 @@ hamburger.addEventListener('click', function () {
   navLinks.classList.toggle("nav__links_active");
   navContacts.classList.toggle("nav__contacts_active");
   document.body.classList.toggle("scroll-none");
+});
+
+function setProjectModalContent(project) {
+  if (!project || !projectModal) {
+    return;
+  }
+
+  if (projectModalTitle) {
+    projectModalTitle.textContent = project.modal.title;
+  }
+
+  if (projectModalHeadline) {
+    projectModalHeadline.textContent = project.title;
+  }
+
+  const texts = [project.modal.task, project.modal.solution, project.modal.result];
+  projectModalSections.forEach((node, index) => {
+    node.textContent = texts[index] || "Сюда текст надо";
+  });
+}
+
+function openProjectModal(projectId) {
+  if (!projectModal) {
+    return;
+  }
+
+  const project = window.ProjectStore?.getProjectById(projectId);
+  setProjectModalContent(project);
+  projectModal.classList.add("is-open");
+  projectModal.setAttribute("aria-hidden", "false");
+  document.body.classList.add("scroll-none");
+}
+
+function closeProjectModal() {
+  if (!projectModal) {
+    return;
+  }
+
+  projectModal.classList.remove("is-open");
+  projectModal.setAttribute("aria-hidden", "true");
+  if (!document.querySelector(".nav__links.nav__links_active")) {
+    document.body.classList.remove("scroll-none");
+  }
+}
+
+document.addEventListener("click", function (event) {
+  const openButton = event.target.closest(".js-open-modal");
+  if (openButton && projectModal) {
+    event.preventDefault();
+    openProjectModal(openButton.dataset.projectId);
+    return;
+  }
+
+  if (event.target.closest(".js-close-modal")) {
+    closeProjectModal();
+  }
+});
+
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape" && projectModal?.classList.contains("is-open")) {
+    closeProjectModal();
+  }
 });
 
 document.addEventListener('DOMContentLoaded', function() {
