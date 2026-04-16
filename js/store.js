@@ -5,7 +5,7 @@
             category: "webapp",
             image: "./img/projectFotoGym-Planer.svg",
             alt: "Превью проекта Тренинг-планер",
-            type: "Веб-приложение",
+            type: "Веб-приложение ",
             stack: ["React (Vite)"],
             title: "Тренинг-планер",
             lead:
