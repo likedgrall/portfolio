@@ -60,7 +60,7 @@
                         <hr>
                         <h1>
                             Создаю сайты для<br>
-                            бизнесов и экспертов
+                            различных компаний
                         </h1>
                     </div>
                     <p>
@@ -79,9 +79,7 @@
             <h2>Мои проекты</h2>
             <div class="projects__intro">
                 <p>
-                    Здесь не просто примеры дизайна, а реальные решения под разные задачи: сбор заявок, презентация
-                    услуги, онлайн-продажа и удобный пользовательский сценарий. Можно быстро отфильтровать проекты по
-                    типу и посмотреть, какую пользу даёт каждый сайт.
+                    Здесь собраны все мои работы. На каждый сайт можно зайти и взглянуть на него по кнопке "Посмотреть проект".
                 </p>
                 <div class="projects__filters" aria-label="Фильтр проектов">
                     <button class="projects__filter is-active" type="button" data-filter="all">Все</button>
@@ -90,8 +88,9 @@
                 </div>
             </div>
             <div class="projects__list">
-                
+                <!-- Контент сгенерирован JavaScript -->
             </div>
+            <a class="projects__more" href="projects.html">Посмотреть все проекты</a>
         </div>
     </section>
     <section id="aboutMe" class="about-me">
@@ -304,6 +303,30 @@
             </a>
         </div>
     </footer>
+    <div class="project-modal" aria-hidden="true">
+        <div class="project-modal__backdrop js-close-modal"></div>
+        <div class="project-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="projectModalTitle">
+            <button class="project-modal__close js-close-modal" type="button" aria-label="Закрыть окно">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <h2 id="projectModalTitle" class="project-modal__title">Тренинг-планер</h2>
+
+            <div class="project-modal__sections">
+                <section class="project-modal__section">
+                    <h3>Задача</h3>
+                    <p>Сюда текст надо</p>
+                </section>
+                <section class="project-modal__section">
+                    <h3>Решение</h3>
+                    <p>Сюда текст надо</p>
+                </section>
+                <section class="project-modal__section">
+                    <h3>Результат</h3>
+                    <p>Сюда текст надо</p>
+                </section>
+            </div>
+        </div>
+    </div>
     <div class="main-wrapper">
         <div class="modal-block">
             <button style="color: #10151d;"><i class="fa-solid fa-xmark"></i></button>
@@ -354,6 +377,7 @@
             </p>
         </div>
     </div>
+    <script src="./js/store.js"></script>
     <script src="./js/main.js"></script>
     <script>
         document.getElementById('contactForm').addEventListener('submit', async function (e) {
