@@ -10,32 +10,21 @@
 }
 
 body.projects-page {
-  background:
-    radial-gradient(circle at 12% 8%, rgba(79, 125, 245, 0.18), transparent 24%),
-    radial-gradient(circle at 88% 16%, rgba(255, 176, 120, 0.14), transparent 22%),
-    radial-gradient(circle at 50% 92%, rgba(16, 21, 29, 0.08), transparent 20%),
-    linear-gradient(180deg, #f8f9fc 0%, #eff2f8 42%, #eef1f7 100%);
-  background-attachment: fixed;
+  background: #f8f9fc;
 }
 
 body.projects-page::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  background-image:
-    linear-gradient(rgba(16, 21, 29, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(16, 21, 29, 0.03) 1px, transparent 1px);
-  background-size: 54px 54px;
-  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.45), transparent 92%);
-  opacity: 0.4;
-  z-index: 0;
+  display: none;
 }
 
-body.projects-page nav,
 body.projects-page main {
   position: relative;
   z-index: 1;
+}
+
+body.projects-page nav {
+  position: fixed;
+  z-index: 30;
 }
 
 body.projects-page .projects {
@@ -123,29 +112,35 @@ body.projects-page .project-modal__backdrop {
 
 body.projects-page .project-modal__dialog {
   position: relative;
-  width: min(100%, 760px);
-  max-height: min(84vh, 760px);
+  width: min(100%, 640px);
+  max-height: min(82vh, 680px);
   overflow: auto;
-  padding: 28px;
-  border-radius: 30px;
+  padding: 22px;
+  border-radius: 22px;
   background: rgba(255, 255, 255, 0.96);
   border: 1px solid rgba(16, 21, 29, 0.08);
-  box-shadow: 0 24px 60px rgba(16, 21, 29, 0.2);
+  box-shadow: 0 18px 46px rgba(16, 21, 29, 0.18);
 }
 
 body.projects-page .project-modal__close {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  width: 42px;
-  height: 42px;
+  position: sticky;
+  top: 0;
+  margin-left: auto;
+  margin-bottom: -34px;
+  width: 34px;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border: none;
   border-radius: 50%;
-  background: rgba(16, 21, 29, 0.06);
+  background: rgba(255, 255, 255, 0.92);
   color: var(--color2);
-  font-size: 20px;
+  font-size: 17px;
   cursor: pointer;
   transition: 0.2s ease;
+  z-index: 2;
+  box-shadow: 0 8px 18px rgba(16, 21, 29, 0.12);
 }
 
 body.projects-page .project-modal__close:hover {
@@ -156,75 +151,96 @@ body.projects-page .project-modal__close:hover {
 body.projects-page .project-modal__eyebrow {
   display: inline-flex;
   width: max-content;
-  padding: 8px 12px;
+  padding: 6px 10px;
   border-radius: 999px;
   background: rgba(79, 125, 245, 0.1);
   color: var(--colorMain);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 14px;
+  margin-bottom: 10px;
 }
 
 body.projects-page .project-modal__title {
   color: var(--color2);
-  font-size: clamp(28px, 4vw, 42px);
-  line-height: 1.1;
-  margin-bottom: 20px;
-  padding-right: 56px;
+  font-size: clamp(24px, 3vw, 32px);
+  line-height: 1.15;
+  margin-bottom: 14px;
+  padding-right: 42px;
 }
 
 body.projects-page .project-modal__field,
 body.projects-page .project-modal__section {
-  border-radius: 20px;
+  border-radius: 14px;
   background: rgba(16, 21, 29, 0.03);
   border: 1px solid rgba(16, 21, 29, 0.06);
 }
 
 body.projects-page .project-modal__field {
-  padding: 18px 20px;
-  margin-bottom: 16px;
+  padding: 13px 15px;
+  margin-bottom: 10px;
 }
 
 body.projects-page .project-modal__field span,
 body.projects-page .project-modal__section h3 {
   display: block;
   color: var(--colorMain);
-  font-size: 13px;
+  font-size: 11px;
   font-weight: 700;
   letter-spacing: 0.05em;
   text-transform: uppercase;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 
 body.projects-page .project-modal__field strong {
   color: var(--color2);
-  font-size: 18px;
-  line-height: 1.45;
+  font-size: 15px;
+  line-height: 1.35;
   font-weight: 600;
 }
 
 body.projects-page .project-modal__sections {
   display: grid;
-  gap: 12px;
+  gap: 8px;
 }
 
 body.projects-page .project-modal__section {
-  padding: 18px 20px;
+  padding: 13px 15px;
 }
 
 body.projects-page .project-modal__section p {
   color: var(--color2);
-  font-size: 15px;
-  line-height: 1.65;
+  font-size: 13px;
+  line-height: 1.5;
 }
 
 body.projects-page .scroll-none {
   overflow: hidden;
 }
 
+@media (max-width: 1024px) {
+  body.projects-page .projects__list {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (max-width: 768px) {
+  body.projects-page .nav__links {
+    background: #f8f9fc;
+    box-shadow: inset 0 -1px 0 rgba(16, 21, 29, 0.08);
+  }
+
+  body.projects-page .nav__links.nav__links_active {
+    z-index: 31;
+  }
+
+  body.projects-page .hamburger,
+  body.projects-page #logoLink,
+  body.projects-page .nav__contacts {
+    z-index: 32;
+  }
+
   body.projects-page .project-library {
     padding: 104px 0 72px;
   }
@@ -239,11 +255,11 @@ body.projects-page .scroll-none {
   }
 
   body.projects-page .project-modal__dialog {
-    padding: 22px;
-    border-radius: 24px;
+    padding: 18px;
+    border-radius: 18px;
   }
 
   body.projects-page .project-modal__title {
-    padding-right: 48px;
+    padding-right: 38px;
   }
 }
