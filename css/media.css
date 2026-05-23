@@ -294,6 +294,52 @@ body {
     flex: 1 1 0;
   }
 
+  .contact {
+    padding: 52px 16px;
+
+    & h2 {
+      font-size: 34px;
+      line-height: 1.1;
+    }
+
+    & .contact-form {
+      padding: 24px;
+    }
+  }
+
+  .privacy-page {
+    & main {
+      padding: 20px 12px 48px;
+    }
+  }
+
+  .privacy {
+    padding: 20px 4px;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+
+    & .privacy__back {
+      margin-bottom: 28px;
+    }
+
+    & h1 {
+      font-size: 31px;
+      line-height: 1.15;
+    }
+
+    & h2 {
+      font-size: 19px;
+      line-height: 1.25;
+    }
+
+    & p,
+    & li {
+      font-size: 15px;
+      line-height: 1.6;
+    }
+  }
+
 }
 
 @media (max-width: 560px) {
@@ -587,6 +633,93 @@ body {
     }
   }
 
+  .contact {
+    padding: 44px 12px;
+
+    & h2 {
+      font-size: 28px;
+    }
+
+    & .subtitle {
+      font-size: 14px;
+      margin-bottom: 26px;
+    }
+
+    & .contact-form {
+      padding: 18px;
+      border-radius: 10px;
+
+      & .form-group {
+        margin-bottom: 18px;
+
+        & label {
+          font-size: 14px;
+        }
+
+        & input,
+        & textarea {
+          font-size: 15px;
+          padding: 11px 13px;
+        }
+      }
+
+      & .form-consent {
+        gap: 9px;
+        font-size: 12px;
+        line-height: 1.45;
+
+        & input {
+          width: 17px;
+          height: 17px;
+        }
+      }
+
+      & .form-note {
+        font-size: 11px;
+        line-height: 1.45;
+      }
+    }
+  }
+
+  .privacy-page {
+    & main {
+      padding: 12px 8px 36px;
+    }
+  }
+
+  .privacy {
+    padding: 18px 4px;
+
+    & .privacy__back {
+      margin-bottom: 24px;
+    }
+
+    & h1 {
+      font-size: 25px;
+      line-height: 1.18;
+      overflow-wrap: anywhere;
+    }
+
+    & section {
+      margin-top: 24px;
+    }
+
+    & h2 {
+      font-size: 17px;
+      line-height: 1.3;
+    }
+
+    & p,
+    & li {
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    & ul {
+      padding-left: 18px;
+    }
+  }
+
   /* Адаптация Процесса работы */
 
   .process .process__card-title {
@@ -663,6 +796,24 @@ body {
 
   .projects .project__actions {
     flex-direction: column;
+  }
+
+  .privacy {
+    padding: 16px 2px;
+
+    & h1 {
+      font-size: 23px;
+    }
+
+    & h2 {
+      font-size: 16px;
+    }
+  }
+
+  .contact {
+    & .contact-form {
+      padding: 16px 12px;
+    }
   }
 }
 

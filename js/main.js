@@ -9,11 +9,6 @@ const projectModalTitle = document.querySelector("#projectModalTitle");
 const projectModalHeadline = document.querySelector(".project-modal__field strong");
 const projectModalSections = document.querySelectorAll(".project-modal__section p");
 
-const mainWrapper = document.querySelector(".main-wrapper");
-const modalBlock = document.querySelector(".modal-block");
-const personData = document.querySelector(".personal");
-const closePolicyButton = document.querySelector(".js-close-policy-modal");
-
 // hamburger.onclick = function () {
 //   hamburger.classList.toggle("hamburger_active");
 //   navLinks.classList.toggle("nav__links_active");
@@ -39,7 +34,7 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
-document.querySelector('a[href="#main"]').addEventListener('click', closeMenu);
+document.querySelector('a[href="#main"]')?.addEventListener('click', closeMenu);
 
 // Обработчик гамбургера
 hamburger.addEventListener('click', function () {
@@ -181,42 +176,4 @@ document.addEventListener('DOMContentLoaded', function() {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(updateClosedHeights, 100);
   });
-});
-
-
-function openPolicyModal() {
-  if (!mainWrapper || !modalBlock) {
-    return;
-  }
-
-  mainWrapper.classList.add("_show");
-  modalBlock.classList.add("_show");
-  body.classList.add("scroll-none");
-}
-
-function closePolicyModal() {
-  if (!mainWrapper || !modalBlock) {
-    return;
-  }
-
-  mainWrapper.classList.remove("_show");
-  modalBlock.classList.remove("_show");
-  if (!projectModal?.classList.contains("is-open") && !document.querySelector(".nav__links.nav__links_active")) {
-    body.classList.remove("scroll-none");
-  }
-}
-
-personData?.addEventListener("click", openPolicyModal);
-closePolicyButton?.addEventListener("click", closePolicyModal);
-
-mainWrapper?.addEventListener("click", function (event) {
-  if (event.target === mainWrapper) {
-    closePolicyModal();
-  }
-});
-
-document.addEventListener("keydown", function (event) {
-  if (event.key === "Escape" && mainWrapper?.classList.contains("_show")) {
-    closePolicyModal();
-  }
 });
